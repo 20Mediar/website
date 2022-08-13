@@ -173,6 +173,184 @@ function dynamicFreguesiadropdown(listindex) {
 
     return true;
 }
+
+
+
+function dynamicConcelhodropdown2(listindex) {
+    let lisboa = ["-", "Amadora", "Cascais", "Lisboa", "Oeiras", "Odivelas", "Sintra"];
+    let madeira = ["-", "Calheta", "Câmara de Lobos", "Funchal", "Machico", "Ponta do Sol", "Porto Moniz",
+        "Porto Santo", "Santa Cruz", "Santana", "São Vicente", "Ribeira Brava"
+    ];
+
+    switch (listindex) {
+        case "":
+            document.getElementById("concelho2").options.length = 0;
+            document.getElementById("concelho2").options[0] = new Option("Selecione concelho", "Selecione concelho");
+            break;
+        case "Lisboa":
+            document.getElementById("concelho2").options.length = 0;
+            document.getElementById("freguesia2").options.length = 1;
+
+            for (let i = 0; i < lisboa.length; i++) {
+                document.getElementById("concelho2").options[i] = new Option(lisboa[i], lisboa[i]);
+            }
+            break;
+        case "RA Madeira":
+            document.getElementById("concelho2").options.length = 0;
+            document.getElementById("freguesia2").options.length = 1;
+
+            for (let i = 0; i < madeira.length; i++) {
+                document.getElementById("concelho2").options[i] = new Option(madeira[i], madeira[i]);
+            }
+            break;
+    }
+    return true;
+}
+</script>
+<script language="javascript" type="text/javascript">
+function dynamicFreguesiadropdown2(listindex) {
+    let amadora = ["-", "Mina de Água", "Encosta do Sol", "Falagueira-Venda Nova", "Venteira", "Águas Livres",
+        "Alfragide"
+    ];
+    let cascais = ["-", "Alcabideche", "Carcavelos e Paredes", "Cascais e Estoril", "São Domingos de Rana"];
+    let lisboa = ["-", "Ajuda", "Alcântara", "Alvalade", "Areeiro", "Arroios", "Avenidas Novas", "Beato", "Belém",
+        "Benfica", "Campo de Ourique", "Campolide", "Carnide", "Estrela", "Lumiar", "Marvila", "Misericórdia",
+        "Olivais", "Parque das Nações", "Penha de França", "Santa Clara", "Santa Maria Maior", "Santo António",
+        "São Domingos de Benfica", "São Vicente"
+    ]
+    let oeiras = ["-", "Algés", "Barcarena", "Caxias", "Carnaxide", "Queijas", "Linda a Velha", "Porto Salvo",
+        "Cruz Quebrada Dafundo", "Paço de Arcos", "Oeiras e São Julião da Barra"
+    ]
+    let odivelas = ["-", "Ramada e Caneças", "Pontinha e Famões", "Odivelas", "Póvoa de Santo Adrião e Olival Basto"]
+    let sintra = ["-", "Agualva e Mira Sintra", "Algueirão-Mem Martins",
+        "Almargem do Bispo, Pêro Pinheiro e Montelavar", "Cacém e São Marcos", "Casal de Cambra", "Colares",
+        "Massamá e Monte Abraão", "Queluz e Belas", "Rio de Mouro", "São João das Lampas e Terrugem", "Sintra"
+    ]
+
+    let calheta = ["-", "Arco da Calheta", "Calheta", "Estreito da Calheta", "Jardim do Mar", "Prazeres",
+        "Fajã da Ovelha", "Paúl do Mar"
+    ]
+    let camLobos = ["-", "Câmara de Lobos", "Curral das Freiras", "Estreito de Câmara de Lobos", "Jardim da Serra",
+        "Quinta Grande"
+    ]
+    let funchal = ["-", "Imaculado Coração de Maria", "Monte", "Santo António", "São Gonçalo", "São Martinho",
+        "São Pedro", "São Roque", "Santa Luzia", "Santa Maria Maior", "Sé"
+    ]
+    let machico = ["-", "Água de Pena", "Caniçal", "Machico", "Porto da Cruz", "Santo António da Serra"]
+    let pontaSol = ["-", "Canhas", "Madalena do Mar", "Ponta do Sol"]
+    let portMoniz = ["-", "Achadas da Cruz", "Porto Moniz", "Ribeira da Janela", "Seixal"]
+    let portSanto = ["Vila Baleira"]
+    let ribrava = ["-", "Campinário", "Ribeira Brava", "Serra d'Água", "Tabua"]
+    let stacruz = ["-", "Camacha", "Caniço", "Gaula", "Santa Cruz", "Santo António da Serra"]
+    let santana = ["-", "Arco de São Jorge", "Faial", "Ilha", "São Jorge", "São Roque do Faial", "Santana"]
+    let saovicente = ["-", "Boaventura", "Ponta Delgada", "São Vicente"]
+
+    switch (listindex) {
+        case "Amadora":
+            document.getElementById("freguesia2").options.length = 0;
+            for (let i = 0; i < amadora.length; i++) {
+                document.getElementById("freguesia2").options[i] = new Option(amadora[i], amadora[i]);
+            }
+            break;
+        case "Cascais":
+            document.getElementById("freguesia2").options.length = 0;
+            for (let i = 0; i < cascais.length; i++) {
+                document.getElementById("freguesia2").options[i] = new Option(cascais[i], cascais[i]);
+            }
+            break;
+        case "Lisboa":
+            document.getElementById("freguesia2").options.length = 0;
+            for (let i = 0; i < lisboa.length; i++) {
+                document.getElementById("freguesia2").options[i] = new Option(lisboa[i], lisboa[i]);
+            }
+            break;
+        case "Oeiras":
+            document.getElementById("freguesia2").options.length = 0;
+            for (let i = 0; i < oeiras.length; i++) {
+                document.getElementById("freguesia2").options[i] = new Option(oeiras[i], oeiras[i]);
+            }
+            break;
+        case "Odivelas":
+            document.getElementById("freguesia2").options.length = 0;
+            for (let i = 0; i < odivelas.length; i++) {
+                document.getElementById("freguesia2").options[i] = new Option(odivelas[i], odivelas[i]);
+            }
+            break;
+        case "Sintra":
+            document.getElementById("freguesia2").options.length = 0;
+            for (let i = 0; i < sintra.length; i++) {
+                document.getElementById("freguesia2").options[i] = new Option(sintra[i], sintra[i]);
+            }
+            break;
+        case "Calheta":
+            document.getElementById("freguesia2").options.length = 0;
+            for (let i = 0; i < calheta.length; i++) {
+                document.getElementById("freguesia2").options[i] = new Option(calheta[i], calheta[i]);
+            }
+            break;
+        case "Câmara de Lobos":
+            document.getElementById("freguesia2").options.length = 0;
+            for (let i = 0; i < camLobos.length; i++) {
+                document.getElementById("freguesia2").options[i] = new Option(camLobos[i], camLobos[i]);
+            }
+            break;
+        case "Funchal":
+            document.getElementById("freguesia2").options.length = 0;
+            for (let i = 0; i < funchal.length; i++) {
+                document.getElementById("freguesia2").options[i] = new Option(funchal[i], funchal[i]);
+            }
+            break;
+        case "Machico":
+            document.getElementById("freguesia2").options.length = 0;
+            for (let i = 0; i < machico.length; i++) {
+                document.getElementById("freguesia2").options[i] = new Option(machico[i], machico[i]);
+            }
+            break;
+        case "Ponta do Sol":
+            document.getElementById("freguesia2").options.length = 0;
+            for (let i = 0; i < pontaSol.length; i++) {
+                document.getElementById("freguesia2").options[i] = new Option(pontaSol[i], pontaSol[i]);
+            }
+            break;
+        case "Porto Santo":
+            document.getElementById("freguesia2").options.length = 0;
+            for (let i = 0; i < portSanto.length; i++) {
+                document.getElementById("freguesia2").options[i] = new Option(portSanto[i], portSanto[i]);
+            }
+            break;
+        case "Ribeira Brava":
+            document.getElementById("freguesia2").options.length = 0;
+            for (let i = 0; i < ribrava.length; i++) {
+                document.getElementById("freguesia2").options[i] = new Option(ribrava[i], ribrava[i]);
+            }
+            break;
+        case "Santa Cruz":
+            document.getElementById("freguesia2").options.length = 0;
+            for (let i = 0; i < stacruz.length; i++) {
+                document.getElementById("freguesia2").options[i] = new Option(stacruz[i], stacruz[i]);
+            }
+            break;
+        case "Santana":
+            document.getElementById("freguesia2").options.length = 0;
+            for (let i = 0; i < santana.length; i++) {
+                document.getElementById("freguesia2").options[i] = new Option(santana[i], santana[i]);
+            }
+            break;
+        case "São Vicente":
+            document.getElementById("freguesia2").options.length = 0;
+            for (let i = 0; i < saovicente.length; i++) {
+                document.getElementById("freguesia2").options[i] = new Option(saovicente[i], saovicente[i]);
+            }
+            break;
+
+    }
+
+    return true;
+}
+
+
+
+
 </script>
 <style>
 .login100-form-btn {
@@ -432,7 +610,7 @@ function dynamicFreguesiadropdown(listindex) {
                                     <div class="row justify-content-between text-left">
                                     <div class="form-group category_div" id="category_div">Distrito:
                                             <select id="source" name="source"
-                                                onchange="javascript: dynamicConcelhodropdown(this.options[this.selectedIndex].value);">
+                                                onchange="javascript: dynamicConcelhodropdown2(this.options[this.selectedIndex].value);">
                                                 <option value="">Selecione distrito</option>
                                                 <option value="Lisboa">Lisboa</option>
                                                 <option value="RA Madeira">RA Madeira</option>
@@ -441,11 +619,11 @@ function dynamicFreguesiadropdown(listindex) {
                                         <div class=" form-group sub_category_div" id="sub_category_div">Concelho:
                                             <script type="text/javascript" language="JavaScript">
                                             document.write(
-                                                '<select name="concelho" id="concelho" onchange="javascript: dynamicFreguesiadropdown(this.options[this.selectedIndex].value);"><option value="">Selecione concelho</option></select>'
+                                                '<select name="concelho" id="concelho" onchange="javascript: dynamicFreguesiadropdown2(this.options[this.selectedIndex].value);"><option value="">Selecione concelho</option></select>'
                                             )
                                             </script>
                                             <noscript>
-                                                <select id="concelho" name="concelho"
+                                                <select id="concelho2" name="concelho"
                                                     onchange="javascript: dynamicFreguesiadropdown(this.options[this.selectedIndex].value);">
                                                 </select>
                                             </noscript>
@@ -453,11 +631,11 @@ function dynamicFreguesiadropdown(listindex) {
                                         <div class="form-group sub_category_div" id="sub_category_div">Freguesia:
                                             <script type="text/javascript" language="JavaScript">
                                             document.write(
-                                                '<select name="freguesia" id="freguesia"><option value="">Selecione freguesia</option></select>'
+                                                '<select name="freguesia" id="freguesia2"><option value="">Selecione freguesia</option></select>'
                                             )
                                             </script>
                                             <noscript>
-                                                <select id="freguesia" name="freguesia"></select>
+                                                <select id="freguesia2s" name="freguesia"></select>
                                             </noscript>
                                         </div>
                                     </div>
