@@ -174,13 +174,13 @@ function dynamicFreguesiadropdown(listindex) {
     return true;
 }
 
-function dynamicConcelhodropdown2(listindex) {
+function dynamicConcelhodropdown2(listindex2) {
     let lisboa = ["-", "Amadora", "Cascais", "Lisboa", "Oeiras", "Odivelas", "Sintra"];
     let madeira = ["-", "Calheta", "Câmara de Lobos", "Funchal", "Machico", "Ponta do Sol", "Porto Moniz",
         "Porto Santo", "Santa Cruz", "Santana", "São Vicente", "Ribeira Brava"
     ];
 
-    switch (listindex) {
+    switch (listindex2) {
         case "":
             document.getElementById("concelho2").options.length = 0;
             document.getElementById("concelho2").options[0] = new Option("Selecione concelho", "Selecione concelho");
@@ -206,7 +206,7 @@ function dynamicConcelhodropdown2(listindex) {
 }
 </script>
 <script language="javascript" type="text/javascript">
-function dynamicFreguesiadropdown2(listindex) {
+function dynamicFreguesiadropdown2(listindex2) {
     let amadora = ["-", "Mina de Água", "Encosta do Sol", "Falagueira-Venda Nova", "Venteira", "Águas Livres",
         "Alfragide"
     ];
@@ -243,7 +243,7 @@ function dynamicFreguesiadropdown2(listindex) {
     let santana = ["-", "Arco de São Jorge", "Faial", "Ilha", "São Jorge", "São Roque do Faial", "Santana"]
     let saovicente = ["-", "Boaventura", "Ponta Delgada", "São Vicente"]
 
-    switch (listindex) {
+    switch (listindex2) {
         case "Amadora":
             document.getElementById("freguesia2").options.length = 0;
             for (let i = 0; i < amadora.length; i++) {
@@ -345,11 +345,14 @@ function dynamicFreguesiadropdown2(listindex) {
 
     return true;
 }
-
-
-
-
 </script>
+
+
+
+
+
+
+
 <style>
 .login100-form-btn {
     display: -webkit-box;
@@ -617,7 +620,7 @@ function dynamicFreguesiadropdown2(listindex) {
                                         <div class=" form-group sub_category_div" id="sub_category_div">Concelho:
                                             <script type="text/javascript" language="JavaScript">
                                             document.write(
-                                                '<select name="concelho" id="concelho" onchange="javascript: dynamicFreguesiadropdown2(this.options[this.selectedIndex].value);"><option value="">Selecione concelho</option></select>'
+                                                '<select name="concelho" id="concelho2" onchange="javascript: dynamicFreguesiadropdown2(this.options[this.selectedIndex].value);"><option value="">Selecione concelho</option></select>'
                                             )
                                             </script>
                                             <noscript>
