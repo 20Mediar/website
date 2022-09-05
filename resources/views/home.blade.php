@@ -609,7 +609,7 @@ function dynamicFreguesiadropdown2(listindex) {
                                     {{ csrf_field() }}
                                     <div class="row justify-content-between text-left">
                                     <div class="form-group category_div" id="category_div">Distrito:
-                                            <select id="source" name="source"
+                                            <select id="source" name="distrito"
                                                 onchange="javascript: dynamicConcelhodropdown2(this.options[this.selectedIndex].value);">
                                                 <option value="">Selecione distrito</option>
                                                 <option value="Lisboa">Lisboa</option>
