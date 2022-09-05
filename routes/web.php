@@ -24,7 +24,7 @@ Route::get('/faq', [App\Http\Controllers\HomeController::class, 'faq'])->name('f
 Route::get('/onde', [App\Http\Controllers\HomeController::class, 'onde'])->name('onde');
 Route::post('/sendemail/send', [App\Http\Controllers\SendEmailController::class, 'send'])->name('send');
 Route::post('sendemail/sendCompra', [App\Http\Controllers\SendEmailController::class, 'sendCompra'])->name('send');
-Route::get("/data", [App\Http\Controllers\SendEmailController::class, "db"])->name('db');
+Route::get("/data", [App\Http\Controllers\SendEmailController::class, "bd"])->name('bd');
 
 
 Route::group(['prefix' => 'admin'], function () {
