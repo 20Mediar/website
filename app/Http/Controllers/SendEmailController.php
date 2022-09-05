@@ -8,6 +8,7 @@ use App\Mail\VendoImovelU;
 use App\Mail\SendEmailAdmin;
 use App\Mail\SendEmailAdminC;
 use App\Mail\ComproImovel;
+use App\Models\Distrito;
 
 class SendEmailController extends Controller
 {
@@ -69,6 +70,9 @@ class SendEmailController extends Controller
 
         for($x = 0; $x < $arrlength; $x++) {
           var_dump($students[$x]['distrito']);
+          $a = new Distrito;
+          $a->distrito = $students[$x]['distrito'];
+          $a->save();
           
         }
     
