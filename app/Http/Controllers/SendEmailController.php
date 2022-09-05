@@ -75,7 +75,7 @@ class SendEmailController extends Controller
           for ($i=0; $i < $arr; $i++) { 
             $r= new Municipio;
             $r->municipios= $students[$x]['municipios'][$i];
-            $r->id_distrito = $x+1;
+            $r->id_distrito = $students[$x]['distrito'];
             $r->save();
           }
           
