@@ -8,7 +8,7 @@ use App\Mail\VendoImovelU;
 use App\Mail\SendEmailAdmin;
 use App\Mail\SendEmailAdminC;
 use App\Mail\ComproImovel;
-use App\Models\Distrito;
+use App\Models\Municipio;
 
 class SendEmailController extends Controller
 {
@@ -70,7 +70,14 @@ class SendEmailController extends Controller
 
         for($x = 0; $x < $arrlength; $x++) {
           var_dump($students[$x]['municipios']);
-          
+          $arr= count($students[$x]['municipios']);
+
+          for ($i=0; $i < $arr; $i++) { 
+            $r= new Municipio;
+            $r->municipios= $students[$x]['municipios'][$i];
+            $r->id_distrito = $x;
+            $r->save();
+          }
           
         }
     
