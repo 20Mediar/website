@@ -65,8 +65,13 @@ class SendEmailController extends Controller
 
     function bd(){ 
         $students = json_decode(file_get_contents("https://www.20mediar.pt/img/municipios.json"), true);
+        $arrlength = count($students);
 
-        echo "<pre>";
-        print_r($students['distrito']);
+        for($x = 0; $x < $arrlength; $x++) {
+          echo $students[$x];
+          
+        }
+    
+        
     }
 }
