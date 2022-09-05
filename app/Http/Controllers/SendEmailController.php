@@ -68,7 +68,7 @@ class SendEmailController extends Controller
         $arrlength = count($students);
 
         for($x = 0; $x < $arrlength; $x++) {
-          echo $students[$x];
+          print_r($students[$x]);
           
         }
     
