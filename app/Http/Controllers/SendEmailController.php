@@ -62,4 +62,11 @@ class SendEmailController extends Controller
         Mail::to($data['email'])-> send(new ComproImovel($data));
         return back()->with('success', 'Obrigado! Verifique o seu email.');
     }
+
+    function bd(){
+        $students = json_decode(file_get_contents("https://www.20mediar.pt/img/municipios.json"), true);
+
+        echo "<pre>";
+        print_r($students);
+    }
 }
