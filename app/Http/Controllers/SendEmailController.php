@@ -65,19 +65,19 @@ class SendEmailController extends Controller
     }
 
     function bd(){ 
-        $students = json_decode(file_get_contents("https://www.20mediar.pt/img/municipios.json"), true);
+        $students = json_decode(file_get_contents("https://www.20mediar.pt/img/freguesias.json"), true);
         $arrlength = count($students);
 
         for($x = 0; $x < $arrlength; $x++) {
-          var_dump($students[$x]['municipios']);
-          $arr= count($students[$x]['municipios']);
+          var_dump($students[$x]['nome']);
+          /*$arr= count($students[$x]['municipios']);
 
           for ($i=0; $i < $arr; $i++) { 
             $r= new Municipio;
             $r->municipios= $students[$x]['municipios'][$i];
             $r->id_distrito = $students[$x]['distrito'];
             $r->save();
-          }
+          }*/
           
         }
     
