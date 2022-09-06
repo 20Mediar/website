@@ -9,6 +9,7 @@ use App\Mail\SendEmailAdmin;
 use App\Mail\SendEmailAdminC;
 use App\Mail\ComproImovel;
 use App\Models\Municipio;
+use App\Models\Freguesia;
 
 class SendEmailController extends Controller
 {
