@@ -67,9 +67,19 @@ class SendEmailController extends Controller
     function bd(){ 
         $students = json_decode(file_get_contents("https://www.20mediar.pt/img/freguesias.json"), true);
         $arrlength = count($students);
-
+        $muni = Municipio::all();
         for($x = 0; $x < $arrlength; $x++) {
           var_dump($students[$x]['nome']);
+
+          if (strcmp($students[$x]['nome'],$muni->municipios) == 0) {
+            $arr= count($students[$x]['freguesias']);
+            for ($i=0; $i < $arr; $i++) { 
+                $r= new Freguesia;
+                $r->freguesia= $students[$x]['freguesias'][$i];
+                $r->id_municipio = $students[$x]['nome'];
+                $r->save();
+              }
+          }
           /*$arr= count($students[$x]['municipios']);
 
           for ($i=0; $i < $arr; $i++) { 
