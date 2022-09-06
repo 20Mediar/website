@@ -70,8 +70,9 @@ class SendEmailController extends Controller
         $muni = Municipio::all();
         for($x = 0; $x < $arrlength; $x++) {
           var_dump($students[$x]['nome']);
+foreach ($muni as $municipio) {
 
-          if (strcmp($students[$x]['nome'],$muni->municipios) == 0) {
+          if (strcmp($students[$x]['nome'],$municipio->municipios) == 0) {
             $arr= count($students[$x]['freguesias']);
             for ($i=0; $i < $arr; $i++) { 
                 $r= new Freguesia;
@@ -80,6 +81,7 @@ class SendEmailController extends Controller
                 $r->save();
               }
           }
+        }
           /*$arr= count($students[$x]['municipios']);
 
           for ($i=0; $i < $arr; $i++) { 
